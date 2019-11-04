@@ -73,7 +73,7 @@ class BaseController extends CI_Controller {
 		$this->global ['pageTitle'] = 'Access Denied';
 		
 		$this->load->view ( 'backend/includes/header', $this->global );
-		$this->load->view ( 'backdend/access' );
+		$this->load->view ( 'backend/access' );
 		$this->load->view ( 'backend/includes/footer' );
 	}
 	

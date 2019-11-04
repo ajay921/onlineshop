@@ -30,12 +30,7 @@ class Category extends BaseController
      */
     function categoryListing()
     {
-        if($this->isAdmin() == TRUE)
-        {
-            $this->loadThis();
-        }
-        else
-        {        
+               
             $searchText = $this->security->xss_clean($this->input->post('searchText'));
             $data['searchText'] = $searchText;
             
@@ -50,7 +45,7 @@ class Category extends BaseController
             $this->global['pageTitle'] = 'Category Listing';
             
             $this->loadViews("backend/category/list", $this->global, $data, NULL);
-        }
+        
     }
 
     /**

@@ -29,12 +29,7 @@ class User extends BaseController
      */
     function userListing()
     {
-        if($this->isAdmin() == TRUE)
-        {
-            $this->loadThis();
-        }
-        else
-        {        
+             
             $searchText = $this->security->xss_clean($this->input->post('searchText'));
             $data['searchText'] = $searchText;
             
@@ -48,7 +43,7 @@ class User extends BaseController
             $this->global['pageTitle'] = 'User Listing';
             
             $this->loadViews("backend/users", $this->global, $data, NULL);
-        }
+        
     }
 
     /**
@@ -56,19 +51,13 @@ class User extends BaseController
      */
     function addNew()
     {
-        if($this->isAdmin() == TRUE)
-        {
-            $this->loadThis();
-        }
-        else
-        {
-            $this->load->model('user_model');
+        $this->load->model('user_model');
             $data['roles'] = $this->user_model->getUserRoles();
             
             $this->global['pageTitle'] = 'Add New User';
 
             $this->loadViews("backend/addNew", $this->global, $data, NULL);
-        }
+        
     }
 
     /**
@@ -94,12 +83,7 @@ class User extends BaseController
      */
     function addNewUser()
     {
-        if($this->isAdmin() == TRUE)
-        {
-            $this->loadThis();
-        }
-        else
-        {
+       
             $this->load->library('form_validation');
             
             $this->form_validation->set_rules('fname','Full Name','trim|required|max_length[128]');
@@ -138,7 +122,7 @@ class User extends BaseController
                 
                 redirect('addNew');
             }
-        }
+        
     }
 
     
@@ -148,12 +132,7 @@ class User extends BaseController
      */
     function editOld($userId = NULL)
     {
-        if($this->isAdmin() == TRUE || $userId == 1)
-        {
-            $this->loadThis();
-        }
-        else
-        {
+       
             if($userId == null)
             {
                 redirect('userListing');
@@ -165,7 +144,7 @@ class User extends BaseController
             $this->global['pageTitle'] = 'Edit User';
             
             $this->loadViews("backend/editOld", $this->global, $data, NULL);
-        }
+        
     }
     
     
@@ -174,13 +153,7 @@ class User extends BaseController
      */
     function editUser()
     {
-        if($this->isAdmin() == TRUE)
-        {
-            $this->loadThis();
-        }
-        else
-        {
-            $this->load->library('form_validation');
+                    $this->load->library('form_validation');
             
             $userId = $this->input->post('userId');
             
@@ -230,7 +203,7 @@ class User extends BaseController
                 
                 redirect('userListing');
             }
-        }
+        
     }
 
 
@@ -241,12 +214,7 @@ class User extends BaseController
     function deleteUser() 
     {
        // pre($_POST);die;
-        if($this->isAdmin() == TRUE)
-        {
-            echo(json_encode(array('status'=>'access')));
-        }
-        else
-        {
+        
             $userId = $this->input->post('userId');
             $table=$this->input->post('table');
             $column=$this->input->post('column');
@@ -257,7 +225,7 @@ class User extends BaseController
             
             if ($result > 0) { echo(json_encode(array('status'=>TRUE))); }
             else { echo(json_encode(array('status'=>FALSE))); }
-        }
+        
     }
     
     /**

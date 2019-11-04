@@ -2,7 +2,7 @@
 
     <footer class="main-footer">
         
-        <strong>Copyright &copy; 2018-2019 <a href="<?php echo base_url(); ?>">Site Name</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2018-2019 <a href="javascript:void();">Site Name</a>.</strong> All rights reserved.
     </footer>
     
     <script src="<?php echo base_url(); ?>assets/backend/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>

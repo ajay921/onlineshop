@@ -40,7 +40,7 @@
       
       <header class="main-header">
         <!-- Logo -->
-        <a href="<?php echo base_url(); ?>" class="logo">
+        <a href="javascript:void();" class="logo">
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini"><b>Logo</b></span>
           <!-- logo for regular state and mobile devices -->
@@ -54,14 +54,14 @@
           </a>
           <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
-              <li class="dropdown tasks-menu">
+              <!-- <li class="dropdown tasks-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
                   <i class="fa fa-history"></i>
                 </a>
                 <ul class="dropdown-menu">
-                  <li class="header"> Last Login : <i class="fa fa-clock-o"></i> <?= empty($last_login) ? "First Time Login" : $last_login; ?></li>
+                  <li class="header"> Last Login : <i class="fa fa-clock-o"></i> <?php //echo empty($last_login) ? "First Time Login" : $last_login; ?></li>
                 </ul>
-              </li>
+              </li> -->
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -106,10 +106,7 @@
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span></i>
               </a>
             </li>
-            <?php
-            if($role == ROLE_ADMIN)
-            {
-            ?>
+            
             <li>
               <a href="<?php echo base_url(); ?>userListing">
                 <i class="fa fa-users"></i>
@@ -129,9 +126,7 @@
                 <span>Products</span>
               </a>
             </li>
-            <?php
-            }
-            ?>
+            
           </ul>
         </section>
         <!-- /.sidebar -->
