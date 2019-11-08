@@ -82,10 +82,10 @@
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
-                      <a href="<?php echo base_url(); ?>profile" class="btn btn-warning btn-flat"><i class="fa fa-user-circle"></i> Profile</a>
+                      <a href="<?php echo base_url(); ?>administrator/profile" class="btn btn-warning btn-flat"><i class="fa fa-user-circle"></i> Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="<?php echo base_url(); ?>logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Sign out</a>
+                      <a href="<?php echo base_url(); ?>administrator/logout" class="btn btn-default btn-flat"><i class="fa fa-sign-out"></i> Sign out</a>
                     </div>
                   </li>
                 </ul>
@@ -102,13 +102,13 @@
           <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MAIN NAVIGATION</li>
             <li>
-              <a href="<?php echo base_url(); ?>dashboard">
+              <a href="<?php echo base_url(); ?>administrator/dashboard">
                 <i class="fa fa-dashboard"></i> <span>Dashboard</span></i>
               </a>
             </li>
             
             <li>
-              <a href="<?php echo base_url(); ?>userListing">
+              <a href="<?php echo base_url(); ?>administrator/userListing">
                 <i class="fa fa-users"></i>
                 <span>Users</span>
               </a>

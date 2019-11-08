@@ -50,32 +50,32 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 
-$route['default_controller'] = "login";
+$route['default_controller'] = "Welcome";
 $route['404_override'] = 'error_404';
 $route['translate_uri_dashes'] = FALSE;
 
 
 /*********** USER DEFINED ROUTES *******************/
-
-$route['loginMe'] = 'backend/login/loginMe';
-$route['dashboard'] = 'backend/user';
-$route['logout'] = 'backend/user/logout';
-$route['userListing'] = 'backend/user/userListing';
-$route['userListing/(:num)'] = "backend/user/userListing/$1";
-$route['addNew'] = "backend/user/addNew";
-$route['addNewUser'] = "backend/user/addNewUser";
-$route['editOld'] = "backend/user/editOld";
-$route['editOld/(:num)'] = "backend/user/editOld/$1";
-$route['editUser'] = "backend/user/editUser";
+$route['administrator/login']='backend/login';
+$route['administrator/loginMe'] = 'backend/login/loginMe';
+$route['administrator/dashboard'] = 'backend/user';
+$route['administrator/logout'] = 'backend/user/logout';
+$route['administrator/userListing'] = 'backend/user/userListing';
+$route['administrator/userListing/(:num)'] = "backend/user/userListing/$1";
+$route['administrator/addNew'] = "backend/user/addNew";
+$route['administrator/addNewUser'] = "backend/user/addNewUser";
+$route['administrator/editOld'] = "backend/user/editOld";
+$route['administrator/editOld/(:num)'] = "backend/user/editOld/$1";
+$route['administrator/editUser'] = "backend/user/editUser";
 $route['deleteUser'] = "backend/user/deleteUser";
-$route['profile'] = "backend/user/profile";
-$route['profile/(:any)'] = "backend/user/profile/$1";
-$route['profileUpdate'] = "backend/user/profileUpdate";
-$route['profileUpdate/(:any)'] = "backend/user/profileUpdate/$1";
+$route['administrator/profile'] = "backend/user/profile";
+$route['administrator/profile/(:any)'] = "backend/user/profile/$1";
+$route['administrator/profileUpdate'] = "backend/user/profileUpdate";
+$route['administrator/profileUpdate/(:any)'] = "backend/user/profileUpdate/$1";
 
-$route['loadChangePass'] = "backend/user/loadChangePass";
-$route['changePassword'] = "backend/user/changePassword";
-$route['changePassword/(:any)'] = "backend/user/changePassword/$1";
+$route['administrator/loadChangePass'] = "backend/user/loadChangePass";
+$route['administrator/changePassword'] = "backend/user/changePassword";
+$route['administrator/changePassword/(:any)'] = "backend/user/changePassword/$1";
 $route['pageNotFound'] = "backend/user/pageNotFound";
 $route['checkEmailExists'] = "backend/user/checkEmailExists";
 $route['login-history'] = "backend/user/loginHistoy";
